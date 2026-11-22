@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+<p>{{ g.user.name }}</p><h1>{{ "My care plan" if g.user.role == "patient" else "My patients" }}</h1>
+{% for name, plan in cards %}<article>{% if g.user.role == "clinician" %}<h2>{{ name }}</h2>{% endif %}
+<small>Current goal</small><p>{{ plan.goal }}</p></article>{% endfor %}
+<form method="post" action="/sign-out"><button>Sign out</button></form>
+{% endblock %}
