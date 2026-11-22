@@ -2,7 +2,10 @@ name: CareBud PR review
 on:
   pull_request:
     branches: [main]
-    types: [opened, reopened, synchronize, ready_for_review, converted_to_draft]
+    # Review once per ready-for-review. New pushes do not re-run it, to save
+    # the shared Claude usage limit. To review again: convert to draft, push
+    # all fixes, then mark the PR ready again.
+    types: [opened, reopened, ready_for_review]
 
 permissions:
   contents: read
@@ -15,15 +18,15 @@ concurrency:
 jobs:
   review:
     name: Claude unit review
+    # Draft PRs skip review (grey) instead of failing.
+    if: github.event.pull_request.draft == false
     runs-on: ubuntu-latest
     timeout-minutes: 12
     steps:
       - name: Check review eligibility
         env:
-          DRAFT: ${{ github.event.pull_request.draft }}
           SAME_REPO: ${{ github.event.pull_request.head.repo.full_name == github.repository }}
         run: |
-          if [[ "$DRAFT" == true ]]; then echo "Ready the PR to request review."; exit 1; fi
           if [[ "$SAME_REPO" != true ]]; then echo "Use a team branch in this private repository."; exit 1; fi
 
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
