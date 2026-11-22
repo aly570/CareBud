@@ -121,3 +121,84 @@ Integrate the five workstreams, run the two-account demo from a clean seed, veri
 
 **Done when**  
 A teammate follows the README on a clean checkout and completes publish → reminder → diary → clinician reply → QR revocation. Attach check output and remaining limitations.
+
+## Submission, hosting and design units
+
+These units cover the hackathon deliverables: demo link, pitch deck, team profile, market rationale, implementation plan, the two 100-word statements and the AI tools disclosure. Content units are reviewed like code: paste the actual document, counts or test results in the PR.
+
+## U13 · Host the public demo link
+
+**Owner** CS 3  
+**Issue** #14  
+**Depends on** U01 (#1)
+
+Deploy the Flask demo to a free host with HTTPS so judges and testers can open it on a phone. Document the host, the seed/reset command and how to redeploy after a merge. Keep demo data fictional.
+
+**Done when**  
+A teammate opens the HTTPS link on a phone using mobile data, signs in with a demo account, and reloads. Reset the demo with the one documented command. Confirm the browser can show the notification permission prompt that U07 (#7) needs.
+
+## U14 · Visual design and UI style
+
+**Owner** CS 3, with Mechanical engineering input  
+**Issue** #15  
+**Depends on** U05 (#5) sketches when available
+
+Use Antigravity to design the look of the patient day view and the clinician editor. Deliver docs/design.md and one CSS tokens file (colours, type sizes, spacing, right-to-left rules for Arabic). Antigravity changes only these design files in this unit, so it does not collide with Codex work on app code.
+
+**Done when**  
+Mockups of both screens are in the PR. Text contrast meets WCAG AA, tap targets are at least 44 px, and an Arabic sample renders right-to-left. The tokens file is linked from README.
+
+## U15 · Problem and solution statements and team profile
+
+**Owner** Pharmacy (statements), Mechanical engineering (team profile)  
+**Issue** #16  
+**Depends on** None. Ready to start.
+
+Write the hackathon problem statement and solution statement in simple English, and the team profile with each member's major and role. Save them in docs/submission.md.
+
+**Done when**  
+Each statement is 100 words or fewer, with the word count shown. Every claim about patients, demand or outcomes has a cited source and date, or is marked as a hypothesis. The team profile lists all five members and their units.
+
+## U16 · Market rationale and implementation plan
+
+**Owner** Pharmacy (market), CS 1 (technical plan)  
+**Issue** #17  
+**Depends on** U15 (#16)
+
+Write the market rationale (target users, Qatar care context, alternatives, cost and who pays) and the implementation plan (what the prototype does, what real use would need: clinical sign-off, data protection, hospital integration, timeline). Save them in docs/market-and-plan.md.
+
+**Done when**  
+Every number has a source and date or is labelled an assumption. The plan separates what is built from what is proposed. A teammate can answer "who pays and why" and "what happens before real patients use it" from the doc alone.
+
+## U17 · Pitch deck and pitch script
+
+**Owner** Mechanical engineering  
+**Issue** #18  
+**Depends on** U15 (#16), U16 (#17), U11 (#11)
+
+Build the pitch deck: problem, solution, live demo, evidence (survey and usability results), market, implementation plan, team. Write a timed script that matches the U11 (#11) demo script.
+
+**Done when**  
+Attach the deck and the timed rehearsal result within the event's time limit. A second teammate can present from the script. Every result shown matches the actual counts in U11 (#11) or U18 (#19).
+
+## U18 · Launch the survey and analyse responses
+
+**Owner** Mechanical engineering  
+**Issue** #19  
+**Depends on** None. Ready to start.
+
+Send the existing survey (CareBud-Survey.gs) to real respondents with a consent line and no identifying questions. Summarise the responses for the deck and for U05 (#5).
+
+**Done when**  
+Report the actual number of responses and the date range, with a chart or table of the main answers. No invented or mock numbers. If responses are too few to support a claim, the summary says so.
+
+## U19 · AI tools disclosure and demo safety notes
+
+**Owner** CS 1  
+**Issue** #20  
+**Depends on** None. Ready to start.
+
+State in README and docs/submission.md which third-party AI tools were used and for what (Codex for planning and code, Claude Code for PR review, Antigravity for UI design), that all demo data is fictional, and that clinical content needs professional sign-off before any real use.
+
+**Done when**  
+A reader of README can name each AI tool and its role. The disclosure matches the event rules if they ask for one. The fictional-data and clinical sign-off notes appear on the demo sign-in page.

@@ -8,11 +8,11 @@ CareBud is a hackathon prototype for the time between clinic visits. A clinician
 
 | Owner | Start now | Later |
 | --- | --- | --- |
-| CS 1 · integration | U01 · sign-in, permissions and shared data contract | U09 · QR sharing, U12 · release |
+| CS 1 · integration | U01 · sign-in, permissions and shared data contract, U19 · AI tools disclosure | U09 · QR sharing, U16 · technical plan, U12 · release |
 | CS 2 · clinician tools | U02 · care-plan editor | U06 · publication, U08 · diary and follow-up |
-| CS 3 · patient app | U03 · daily plan | U07 · reminders and progress |
-| Mechanical engineering · human factors | U05 · patient journey and test design | U11 · usability testing and demo |
-| Pharmacy · clinical content | U04 · fictional care plan | U10 · clinical walkthrough |
+| CS 3 · patient app | U03 · daily plan, U14 · visual design | U13 · public demo link, U07 · reminders and progress |
+| Mechanical engineering · human factors | U05 · patient journey and test design, U18 · survey, U15 · team profile | U11 · usability testing and demo, U17 · pitch deck |
+| Pharmacy · clinical content | U04 · fictional care plan, U15 · problem and solution statements | U16 · market rationale, U10 · clinical walkthrough |
 
 ## Working agreement
 
@@ -21,4 +21,4 @@ CareBud is a hackathon prototype for the time between clinic visits. A clinician
 3. Mark the PR ready when its dependencies have merged and its check passes. Claude reviews the current change. If it finds a blocker, fix it on the same branch. Use draft mode while making several fixes together.
 4. A teammate checks the Claude verdict for the latest commit and the unit evidence, then merges. An unavailable review or a request for changes keeps the unit open. Start independent units in parallel.
 
-Codex owns planning, implementation support and fixes. Claude Code owns independent review. The pharmacy lead checks clinical wording. See [review setup](docs/review.md). The first milestone is a mobile-friendly, fictional-data demo. A guideline-search assistant and hospital integration can be scoped after that demo.
+Codex owns planning, implementation support and fixes, and follows [AGENTS.md](AGENTS.md). Antigravity designs the UI inside U14 only. Claude Code owns independent review. The pharmacy lead checks clinical wording. See [review setup](docs/review.md). The first milestone is a mobile-friendly, fictional-data demo. A guideline-search assistant and hospital integration can be scoped after that demo.
