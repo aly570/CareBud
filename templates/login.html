@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<a href="/">← Choose a different role</a><h1>{{ role|capitalize }} sign-in</h1>
+<form method="post"><label>Account<input name="username" autocomplete="username" required></label>
+<label>Password<input name="password" type="password" autocomplete="current-password" required></label>
+{% if error %}<p role="alert">{{ error }}</p>{% endif %}<button>Sign in</button></form>
+<aside>Demo account <b>{{ role }}-a</b><br>Password <b>CareBud-demo</b></aside>
+{% endblock %}
